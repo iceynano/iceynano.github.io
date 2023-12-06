@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How to do statistics on item drop rate | Alas Wiki</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    
+    <meta name="description" content="The Next Generation Game AutoScript">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.def407d0.css" as="style"><link rel="preload" href="/assets/js/app.78daa96c.js" as="script"><link rel="preload" href="/assets/js/2.af7fb78a.js" as="script"><link rel="preload" href="/assets/js/1.592cd0e6.js" as="script"><link rel="preload" href="/assets/js/47.0e259247.js" as="script"><link rel="prefetch" href="/assets/js/10.ebf63330.js"><link rel="prefetch" href="/assets/js/11.9cba1676.js"><link rel="prefetch" href="/assets/js/12.43ccf4d1.js"><link rel="prefetch" href="/assets/js/13.b645a106.js"><link rel="prefetch" href="/assets/js/14.13e65bfb.js"><link rel="prefetch" href="/assets/js/15.3645b6ab.js"><link rel="prefetch" href="/assets/js/16.9e372e07.js"><link rel="prefetch" href="/assets/js/17.6357ee0e.js"><link rel="prefetch" href="/assets/js/18.a56add02.js"><link rel="prefetch" href="/assets/js/19.4613b0e4.js"><link rel="prefetch" href="/assets/js/20.3a45d050.js"><link rel="prefetch" href="/assets/js/21.b4491ec8.js"><link rel="prefetch" href="/assets/js/22.cfb93602.js"><link rel="prefetch" href="/assets/js/23.4e633445.js"><link rel="prefetch" href="/assets/js/24.ee46bcea.js"><link rel="prefetch" href="/assets/js/25.5277074d.js"><link rel="prefetch" href="/assets/js/26.814211c4.js"><link rel="prefetch" href="/assets/js/27.77947e8a.js"><link rel="prefetch" href="/assets/js/28.3c2ae803.js"><link rel="prefetch" href="/assets/js/29.8feb7215.js"><link rel="prefetch" href="/assets/js/3.c9cdf263.js"><link rel="prefetch" href="/assets/js/30.1dbca0e1.js"><link rel="prefetch" href="/assets/js/31.62fe9090.js"><link rel="prefetch" href="/assets/js/32.ffbcbbd8.js"><link rel="prefetch" href="/assets/js/33.419fa715.js"><link rel="prefetch" href="/assets/js/34.be138503.js"><link rel="prefetch" href="/assets/js/35.02543194.js"><link rel="prefetch" href="/assets/js/36.d34ca2d4.js"><link rel="prefetch" href="/assets/js/37.4caf7cbd.js"><link rel="prefetch" href="/assets/js/38.a96e4d9c.js"><link rel="prefetch" href="/assets/js/39.03826fec.js"><link rel="prefetch" href="/assets/js/4.baa974b4.js"><link rel="prefetch" href="/assets/js/40.5a5e0ce9.js"><link rel="prefetch" href="/assets/js/41.4f6a0496.js"><link rel="prefetch" href="/assets/js/42.6183f45f.js"><link rel="prefetch" href="/assets/js/43.efdb1d6c.js"><link rel="prefetch" href="/assets/js/44.08309fa8.js"><link rel="prefetch" href="/assets/js/45.cd150b46.js"><link rel="prefetch" href="/assets/js/46.ddffbb5c.js"><link rel="prefetch" href="/assets/js/48.fdf2013b.js"><link rel="prefetch" href="/assets/js/49.9e5ab69e.js"><link rel="prefetch" href="/assets/js/5.596c3c4c.js"><link rel="prefetch" href="/assets/js/50.d300a10a.js"><link rel="prefetch" href="/assets/js/51.fc74317d.js"><link rel="prefetch" href="/assets/js/52.5032b379.js"><link rel="prefetch" href="/assets/js/53.09200c6c.js"><link rel="prefetch" href="/assets/js/54.60201a5a.js"><link rel="prefetch" href="/assets/js/55.d97fffca.js"><link rel="prefetch" href="/assets/js/56.9085dd2f.js"><link rel="prefetch" href="/assets/js/57.9f3d6151.js"><link rel="prefetch" href="/assets/js/58.c79528e6.js"><link rel="prefetch" href="/assets/js/59.c09675e8.js"><link rel="prefetch" href="/assets/js/6.6e945098.js"><link rel="prefetch" href="/assets/js/60.1e35e4ea.js"><link rel="prefetch" href="/assets/js/61.0e154a78.js"><link rel="prefetch" href="/assets/js/62.3c6d2a1e.js"><link rel="prefetch" href="/assets/js/63.b657ee9e.js"><link rel="prefetch" href="/assets/js/64.0e5b9088.js"><link rel="prefetch" href="/assets/js/7.150b3b85.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.9fd01095.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.def407d0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Alas Wiki</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/dev/Perspective.html" class="nav-link">
+  Develop
+</a></div><div class="nav-item"><a href="https://alas.azurlane.cloud/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Official Site
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://alas.azurlane.cloud/demo/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Alas Demo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/LmeSzinc/AzurLaneAutoScript/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github Page
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dev/item_statistics.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/dev/Perspective.html" class="nav-link">
+  Develop
+</a></div><div class="nav-item"><a href="https://alas.azurlane.cloud/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Official Site
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://alas.azurlane.cloud/demo/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Alas Demo
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://github.com/LmeSzinc/AzurLaneAutoScript/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github Page
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dev/item_statistics.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Develop</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/dev/Perspective.html" class="sidebar-link">Map Detection</a></li><li><a href="/dev/item_statistics.html" aria-current="page" class="active sidebar-link">How to do statistics on item drop rate</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dev/item_statistics.html#enable-statistics-in-alas" class="sidebar-link">Enable statistics in alas</a></li><li class="sidebar-sub-header"><a href="/dev/item_statistics.html#prepare-a-new-environment" class="sidebar-link">Prepare a new environment</a></li><li class="sidebar-sub-header"><a href="/dev/item_statistics.html#first-run" class="sidebar-link">First Run</a></li><li class="sidebar-sub-header"><a href="/dev/item_statistics.html#second-run" class="sidebar-link">Second Run</a></li><li class="sidebar-sub-header"><a href="/dev/item_statistics.html#improvement" class="sidebar-link">Improvement</a></li></ul></li><li><a href="/dev/debug_perspective.html" class="sidebar-link">How to debug a perspective error</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="how-to-do-statistics-on-item-drop-rate"><a href="#how-to-do-statistics-on-item-drop-rate" class="header-anchor">#</a> How to do statistics on item drop rate</h1> <p>This document will show how to use <code>dev_tools/item_statistics.py</code></p> <h2 id="enable-statistics-in-alas"><a href="#enable-statistics-in-alas" class="header-anchor">#</a> Enable statistics in alas</h2> <p>In alas GUI,</p> <ol><li><p>set <code>enable_drop_screenshot</code> to <code>yes</code>, if enabled, alas will add a 1s sleep before screenshot, to avoid capture the flash. There's a flash light when item shows up.</p></li> <li><p>set <code>drop_screenshot_folder</code> to be the folder you want to save. It is recommended to save it in SSD.</p></li> <li><p>Run Alas few hours or few days, and you will get a folder structure like:</p> <p>(Screenshots are named after millisecond timestamp.)</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;your_folder&gt;
+    campaign_7_2
+        get_items
+            158323xxxxxxx.png
+            158323xxxxxxx.png
+            158323xxxxxxx.png
+        get_mission
+        get_ship
+        mystery
+        status
+    campaign_10_4_HARD
+        get_items
+        get_mission
+        get_ship
+        status
+    d3
+        get_items
+        get_mission
+        get_ship
+        status
+</code></pre></div><h2 id="prepare-a-new-environment"><a href="#prepare-a-new-environment" class="header-anchor">#</a> Prepare a new environment</h2> <ol><li><p>Prepare another virtual environment, accoring to <code>requirements.txt</code>. But use the GPU version of <code>mxnet</code>.</p> <p>I am using GTX1080Ti, and I installed <code>mxnet-cu101==1.6.0</code>, <code>CUDA10.1</code>, <code>cuDNN</code>. Google  <code>mxnet gpu install</code>, and see how to do in details. You may intall other version of CUDA, and mxnet for that CUDA, because you are using another graphic card.</p></li> <li><p>Goto module/ocr/al_ocr.py line 21, replace</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>context='cpu',
+</code></pre></div><p>to be:</p> <div class="language- extra-class"><pre class="language-text"><code>context='gpu',
+</code></pre></div><p>Now cnocr will run on GPU.</p> <p>You can skip this procedure anyway, and use the same environment as alas, but the OCR will run really slow.</p> <h2 id="first-run"><a href="#first-run" class="header-anchor">#</a> First Run</h2> <p>Before any actual statistics, you need to extract templates first.</p> <ol><li>Change your server in line 8:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>server.server = 'cn'  # Edit your server here.
+</code></pre></div><ol start="2"><li>Set your <code>FOLDER</code> and <code>CSV_FILE</code> at the bottom of the file.</li></ol> <div class="language- extra-class"><pre class="language-text"><code>&quot;&quot;&quot;
+Args:
+    FOLDER:   Alas drop screenshot folder.
+              Examples: '&lt;your_drop_screenshot_folder&gt;/campaign_7_2'
+    CSV_FILE: Csv file to save.
+              Examples: 'c72.csv'
+&quot;&quot;&quot;
+FOLDER = ''
+CSV_FILE = ''
+drop = DropStatistics(FOLDER)
+</code></pre></div><ol start="3"><li>Uncomment the this and run.</li></ol> <div class="language- extra-class"><pre class="language-text"><code># drop.extract_template()
+</code></pre></div><p>You will get some new templates named in number under folder <code>item_template</code>. Here's an example log:</p> <div class="language- extra-class"><pre class="language-text"><code>  1%|          | 107/12668 [00:05&lt;10:24, 20.10it/s]2020-06-03 10:39:42.609 | INFO | New item template: 50
+  1%|          | 158/12668 [00:07&lt;10:42, 19.47it/s]2020-06-03 10:39:45.098 | INFO | New item template: 51
+  2%|▏         | 207/12668 [00:10&lt;10:33, 19.66it/s]2020-06-03 10:39:47.772 | INFO | New item template: 52
+  2%|▏         | 215/12668 [00:10&lt;11:20, 18.29it/s]2020-06-03 10:39:48.304 | INFO | New item template: 53
+100%|██████████| 12668/12668 [10:33&lt;00:00, 19.99it/s]
+</code></pre></div><ol start="4"><li><p>Rename new templates with Camel-Case, such as <code>PlateGeneralT3</code>. Suffix in name will be ignore.</p> <p>For example, <code>Javelin</code> and <code>Javelin_2</code> are different templates, but have same output name 'Javelin'.</p></li></ol> <blockquote><p><strong>Why extract templates before every stats, why not provide ready-made templates</strong></p> <ul><li>There are too many items in game, can't collect them all.</li> <li>If it find new templates during actual run, may give unexpected result.</li> <li>If some of your accounts used All-Skin, ship icons will be different.</li> <li>Too many templates will make it slow.</li></ul></blockquote> <h2 id="second-run"><a href="#second-run" class="header-anchor">#</a> Second Run</h2> <ol><li>Comment the code in first run.</li></ol> <div class="language- extra-class"><pre class="language-text"><code>drop.extract_template()
+</code></pre></div><ol start="2"><li>uncomment this, and run.</li></ol> <div class="language- extra-class"><pre class="language-text"><code>import csv
+with open(CSV_FILE, 'a', newline='') as csv_file:
+    writer = csv.writer(csv_file)
+    for d in drop.generate_data():
+        writer.writerows(d)
+</code></pre></div><p>Here's an example log:</p> <div class="language- extra-class"><pre class="language-text"><code>2020-06-03 12:23:55.355 | INFO | [ENEMY_GENRE 0.007s] 中型侦查舰队
+2020-06-03 12:23:55.363 | INFO | [Amount_ocr 0.009s] [1, 1, 22]
+100%|█████████▉| 14916/14919 [20:32&lt;00:00, 13.20it/s]2020-06-03 12:23:55.442 | INFO | [ENEMY_GENRE 0.007s] 大型航空舰队
+2020-06-03 12:23:55.455 | INFO | [Amount_ocr 0.013s] [1, 1, 1, 17]
+2020-06-03 12:23:55.539 | INFO | [ENEMY_GENRE 0.007s] 敌方旗舰
+2020-06-03 12:23:55.549 | INFO | [Amount_ocr 0.010s] [1, 2, 1, 63]
+100%|█████████▉| 14918/14919 [20:33&lt;00:00, 12.35it/s]2020-06-03 12:23:55.623 | INFO | [ENEMY_GENRE 0.007s] 精英舰队
+2020-06-03 12:23:55.633 | INFO | [Amount_ocr 0.010s] [1, 1, 1, 17]
+100%|██████████| 14919/14919 [20:33&lt;00:00, 12.10it/s]
+</code></pre></div><p>Now you have a csv file, formated to be:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;get_item_timestamp&gt;, &lt;battle_status_timestamp&gt;, &lt;enemy_name&gt;, &lt;item_name&gt;, &lt;item_amount&gt;
+</code></pre></div><p>like this:</p> <div class="language- extra-class"><pre class="language-text"><code>1590271317900,1590271315841,中型主力舰队,主炮部件T3,1
+1590271317900,1590271315841,中型主力舰队,物资,23
+1590271359374,1590271357251,小型侦查舰队,通用部件T1,1
+1590271359374,1590271357251,小型侦查舰队,鱼雷部件T2,1
+1590271359374,1590271357251,小型侦查舰队,物资,13
+1590271415308,1590271413207,敌方旗舰,彗星,1
+1590271415308,1590271413207,敌方旗舰,通用部件T3,1
+1590271415308,1590271413207,敌方旗舰,科技箱T1,1
+1590271415308,1590271413207,敌方旗舰,物资,42
+1590271415308,1590271413207,敌方旗舰,_比萨研发物资,1
+1590271415308,1590271413207,敌方旗舰,_鸢尾之印,1
+</code></pre></div><p>You can open it in Excel or load it into database.</p> <h2 id="improvement"><a href="#improvement" class="header-anchor">#</a> Improvement</h2> <p>These code is running on single thread, you can try adding multiprocess to speed up. I didn't do that because it's still acceptable (25it/s without ocr, 15it/s with ocr)</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/dev/Perspective.html" class="prev">
+        Map Detection
+      </a></span> <span class="next"><a href="/dev/debug_perspective.html">
+        How to debug a perspective error
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.78daa96c.js" defer></script><script src="/assets/js/2.af7fb78a.js" defer></script><script src="/assets/js/1.592cd0e6.js" defer></script><script src="/assets/js/47.0e259247.js" defer></script>
+  </body>
+</html>
